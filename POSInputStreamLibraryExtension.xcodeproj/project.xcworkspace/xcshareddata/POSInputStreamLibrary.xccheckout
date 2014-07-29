@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>B1FD8E81-5F51-4FFF-B8C5-D4BDDCA0930A</string>
+	<string>95E242A5-3060-4305-9DCC-0F1906F3A747</string>
 	<key>IDESourceControlProjectName</key>
 	<string>POSInputStreamLibrary</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>933053AB-17B4-47B5-A949-F748B9B8BC69</key>
-		<string>ssh://github.com/pavelosipov/POSInputStreamLibrary.git</string>
+		<key>A828F4FB-EEDB-4750-A532-9B90967D88CE</key>
+		<string>https://github.com/VladiMihaylenko/POSInputStreamLibrary.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>POSInputStreamLibrary.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>933053AB-17B4-47B5-A949-F748B9B8BC69</key>
+		<key>A828F4FB-EEDB-4750-A532-9B90967D88CE</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/pavelosipov/POSInputStreamLibrary.git</string>
+	<string>https://github.com/VladiMihaylenko/POSInputStreamLibrary.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>933053AB-17B4-47B5-A949-F748B9B8BC69</string>
+	<string>A828F4FB-EEDB-4750-A532-9B90967D88CE</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>933053AB-17B4-47B5-A949-F748B9B8BC69</string>
+			<string>A828F4FB-EEDB-4750-A532-9B90967D88CE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>POSInputStreamLibrary</string>
 		</dict>

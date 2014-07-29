@@ -9,12 +9,6 @@
 #import "POSBlobInputStreamDataSource.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 
-FOUNDATION_EXTERN NSString * const POSBlobInputStreamAssetDataSourceErrorDomain;
-
-typedef NS_ENUM(NSInteger, POSBlobInputStreamAssetDataSourceErrorCode) {
-    POSBlobInputStreamAssetDataSourceErrorCodeOpen = 0,
-    POSBlobInputStreamAssetDataSourceErrorCodeRead = 1
-};
 
 @interface POSBlobInputStreamAssetDataSource : NSObject <POSBlobInputStreamDataSource>
 
@@ -23,3 +17,5 @@ typedef NS_ENUM(NSInteger, POSBlobInputStreamAssetDataSourceErrorCode) {
 - (id)initWithAssetURL:(NSURL *)assetURL;
 
 @end
+
+

@@ -241,6 +241,8 @@ static void POSRunLoopPerformCallBack(void *info);
             [self enqueueEvent:NSStreamEventEndEncountered];
         } else if ([keyPath isEqualToString:POSBlobInputStreamDataSourceErrorKeyPath] && newValue != nil) {
             [self setError:newValue];
+        } else if ([keyPath isEqualToString:@"shouldNotifyCoreFoundationAboutStatusChange"]) {
+            
         }
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];

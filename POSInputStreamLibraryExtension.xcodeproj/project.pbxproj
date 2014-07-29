@@ -10,7 +10,7 @@
 		219AA09718BF78A4000B68AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA09618BF78A4000B68AB /* Foundation.framework */; };
 		219AA0A518BF78A4000B68AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA0A418BF78A4000B68AB /* XCTest.framework */; };
 		219AA0A618BF78A4000B68AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA09618BF78A4000B68AB /* Foundation.framework */; };
-		219AA0AB18BF78A4000B68AB /* libPOSInputStreamLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA09318BF78A4000B68AB /* libPOSInputStreamLibrary.a */; };
+		219AA0AB18BF78A4000B68AB /* libPOSInputStreamLibraryExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA09318BF78A4000B68AB /* libPOSInputStreamLibraryExtension.a */; };
 		219AA0B118BF78A4000B68AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 219AA0AF18BF78A4000B68AB /* InfoPlist.strings */; };
 		219AA0B318BF78A4000B68AB /* POSInputStreamLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 219AA0B218BF78A4000B68AB /* POSInputStreamLibraryTests.m */; };
 		219AA0C718BF7C5B000B68AB /* NSInputStream+POS.m in Sources */ = {isa = PBXBuildFile; fileRef = 219AA0BD18BF7C5B000B68AB /* NSInputStream+POS.m */; };
@@ -19,6 +19,8 @@
 		219AA0D418C07E77000B68AB /* POSRunLoopRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = 219AA0CE18C07E77000B68AB /* POSRunLoopRunner.m */; };
 		219AA0D518C07E77000B68AB /* POSBlobInputStreamMockDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 219AA0D118C07E77000B68AB /* POSBlobInputStreamMockDataSource.m */; };
 		219AA0D618C07E77000B68AB /* POSBlobInputStreamMockDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 219AA0D318C07E77000B68AB /* POSBlobInputStreamMockDelegate.m */; };
+		B7C620B919878EF300BA0ADD /* POSLocking.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C620B819878EF300BA0ADD /* POSLocking.m */; };
+		B7C620BC19878F0700BA0ADD /* POSInputStreamJPEGDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C620BB19878F0700BA0ADD /* POSInputStreamJPEGDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,24 +46,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		219AA09318BF78A4000B68AB /* libPOSInputStreamLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPOSInputStreamLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		219AA09318BF78A4000B68AB /* libPOSInputStreamLibraryExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPOSInputStreamLibraryExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		219AA09618BF78A4000B68AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		219AA09A18BF78A4000B68AB /* POSInputStreamLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "POSInputStreamLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		219AA0A318BF78A4000B68AB /* POSInputStreamLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POSInputStreamLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		219AA0A318BF78A4000B68AB /* POSInputStreamLibraryExtensionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POSInputStreamLibraryExtensionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		219AA0A418BF78A4000B68AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		219AA0A718BF78A4000B68AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		219AA0AE18BF78A4000B68AB /* POSInputStreamLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "POSInputStreamLibraryTests-Info.plist"; sourceTree = "<group>"; };
+		219AA0AE18BF78A4000B68AB /* POSInputStreamLibraryExtensionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "POSInputStreamLibraryExtensionTests-Info.plist"; sourceTree = "<group>"; };
 		219AA0B018BF78A4000B68AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		219AA0B218BF78A4000B68AB /* POSInputStreamLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POSInputStreamLibraryTests.m; sourceTree = "<group>"; };
 		219AA0BC18BF7C5B000B68AB /* NSInputStream+POS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInputStream+POS.h"; sourceTree = "<group>"; };
 		219AA0BD18BF7C5B000B68AB /* NSInputStream+POS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSInputStream+POS.m"; sourceTree = "<group>"; };
-		219AA0BE18BF7C5B000B68AB /* POSBlobInputStream-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POSBlobInputStream-Prefix.pch"; sourceTree = "<group>"; };
 		219AA0BF18BF7C5B000B68AB /* POSBlobInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSBlobInputStream.h; sourceTree = "<group>"; };
 		219AA0C018BF7C5B000B68AB /* POSBlobInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSBlobInputStream.m; sourceTree = "<group>"; };
 		219AA0C118BF7C5B000B68AB /* POSBlobInputStreamAssetDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSBlobInputStreamAssetDataSource.h; sourceTree = "<group>"; };
 		219AA0C218BF7C5B000B68AB /* POSBlobInputStreamAssetDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSBlobInputStreamAssetDataSource.m; sourceTree = "<group>"; };
 		219AA0C318BF7C5B000B68AB /* POSBlobInputStreamDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSBlobInputStreamDataSource.h; sourceTree = "<group>"; };
-		219AA0C418BF7C5B000B68AB /* POSInputStreamLibrary-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POSInputStreamLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		219AA0C418BF7C5B000B68AB /* POSInputStreamLibraryExtension-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "POSInputStreamLibraryExtension-Prefix.pch"; sourceTree = "<group>"; };
 		219AA0C518BF7C5B000B68AB /* POSInputStreamLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSInputStreamLibrary.h; sourceTree = "<group>"; };
 		219AA0CD18C07E77000B68AB /* POSRunLoopRunner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSRunLoopRunner.h; sourceTree = "<group>"; };
 		219AA0CE18C07E77000B68AB /* POSRunLoopRunner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSRunLoopRunner.m; sourceTree = "<group>"; };
@@ -70,6 +70,10 @@
 		219AA0D218C07E77000B68AB /* POSBlobInputStreamMockDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSBlobInputStreamMockDelegate.h; sourceTree = "<group>"; };
 		219AA0D318C07E77000B68AB /* POSBlobInputStreamMockDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSBlobInputStreamMockDelegate.m; sourceTree = "<group>"; };
 		219AA0D718C07E81000B68AB /* POSInputStreamLibraryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POSInputStreamLibraryTests.h; sourceTree = "<group>"; };
+		B7C620B719878EF300BA0ADD /* POSLocking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSLocking.h; sourceTree = "<group>"; };
+		B7C620B819878EF300BA0ADD /* POSLocking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSLocking.m; sourceTree = "<group>"; };
+		B7C620BA19878F0700BA0ADD /* POSInputStreamJPEGDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSInputStreamJPEGDataSource.h; sourceTree = "<group>"; };
+		B7C620BB19878F0700BA0ADD /* POSInputStreamJPEGDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSInputStreamJPEGDataSource.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 			files = (
 				219AA0A518BF78A4000B68AB /* XCTest.framework in Frameworks */,
 				219AA0A618BF78A4000B68AB /* Foundation.framework in Frameworks */,
-				219AA0AB18BF78A4000B68AB /* libPOSInputStreamLibrary.a in Frameworks */,
+				219AA0AB18BF78A4000B68AB /* libPOSInputStreamLibraryExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +101,7 @@
 		219AA08A18BF78A4000B68AB = {
 			isa = PBXGroup;
 			children = (
-				219AA09818BF78A4000B68AB /* POSInputStreamLibrary */,
+				219AA09818BF78A4000B68AB /* POSInputStreamLibraryExtension */,
 				219AA0AC18BF78A4000B68AB /* POSInputStreamLibraryTests */,
 				219AA09518BF78A4000B68AB /* Frameworks */,
 				219AA09418BF78A4000B68AB /* Products */,
@@ -107,8 +111,8 @@
 		219AA09418BF78A4000B68AB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				219AA09318BF78A4000B68AB /* libPOSInputStreamLibrary.a */,
-				219AA0A318BF78A4000B68AB /* POSInputStreamLibraryTests.xctest */,
+				219AA09318BF78A4000B68AB /* libPOSInputStreamLibraryExtension.a */,
+				219AA0A318BF78A4000B68AB /* POSInputStreamLibraryExtensionTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,28 +127,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		219AA09818BF78A4000B68AB /* POSInputStreamLibrary */ = {
+		219AA09818BF78A4000B68AB /* POSInputStreamLibraryExtension */ = {
 			isa = PBXGroup;
 			children = (
 				219AA0BC18BF7C5B000B68AB /* NSInputStream+POS.h */,
 				219AA0BD18BF7C5B000B68AB /* NSInputStream+POS.m */,
-				219AA0BE18BF7C5B000B68AB /* POSBlobInputStream-Prefix.pch */,
 				219AA0BF18BF7C5B000B68AB /* POSBlobInputStream.h */,
 				219AA0C018BF7C5B000B68AB /* POSBlobInputStream.m */,
 				219AA0C118BF7C5B000B68AB /* POSBlobInputStreamAssetDataSource.h */,
 				219AA0C218BF7C5B000B68AB /* POSBlobInputStreamAssetDataSource.m */,
+				B7C620BA19878F0700BA0ADD /* POSInputStreamJPEGDataSource.h */,
+				B7C620BB19878F0700BA0ADD /* POSInputStreamJPEGDataSource.m */,
 				219AA0C318BF7C5B000B68AB /* POSBlobInputStreamDataSource.h */,
-				219AA0C418BF7C5B000B68AB /* POSInputStreamLibrary-Prefix.pch */,
+				B7C620B719878EF300BA0ADD /* POSLocking.h */,
+				B7C620B819878EF300BA0ADD /* POSLocking.m */,
 				219AA0C518BF7C5B000B68AB /* POSInputStreamLibrary.h */,
 				219AA09918BF78A4000B68AB /* Supporting Files */,
 			);
+			name = POSInputStreamLibraryExtension;
 			path = POSInputStreamLibrary;
 			sourceTree = "<group>";
 		};
 		219AA09918BF78A4000B68AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				219AA09A18BF78A4000B68AB /* POSInputStreamLibrary-Prefix.pch */,
+				219AA0C418BF7C5B000B68AB /* POSInputStreamLibraryExtension-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -164,7 +171,7 @@
 		219AA0AD18BF78A4000B68AB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				219AA0AE18BF78A4000B68AB /* POSInputStreamLibraryTests-Info.plist */,
+				219AA0AE18BF78A4000B68AB /* POSInputStreamLibraryExtensionTests-Info.plist */,
 				219AA0AF18BF78A4000B68AB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -193,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		219AA09218BF78A4000B68AB /* POSInputStreamLibrary */ = {
+		219AA09218BF78A4000B68AB /* POSInputStreamLibraryExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 219AA0B618BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibrary" */;
+			buildConfigurationList = 219AA0B618BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibraryExtension" */;
 			buildPhases = (
 				219AA08F18BF78A4000B68AB /* Sources */,
 				219AA09018BF78A4000B68AB /* Frameworks */,
@@ -205,14 +212,14 @@
 			);
 			dependencies = (
 			);
-			name = POSInputStreamLibrary;
+			name = POSInputStreamLibraryExtension;
 			productName = POSInputStreamLibrary;
-			productReference = 219AA09318BF78A4000B68AB /* libPOSInputStreamLibrary.a */;
+			productReference = 219AA09318BF78A4000B68AB /* libPOSInputStreamLibraryExtension.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		219AA0A218BF78A4000B68AB /* POSInputStreamLibraryTests */ = {
+		219AA0A218BF78A4000B68AB /* POSInputStreamLibraryExtensionTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 219AA0B918BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibraryTests" */;
+			buildConfigurationList = 219AA0B918BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibraryExtensionTests" */;
 			buildPhases = (
 				219AA09F18BF78A4000B68AB /* Sources */,
 				219AA0A018BF78A4000B68AB /* Frameworks */,
@@ -223,9 +230,9 @@
 			dependencies = (
 				219AA0AA18BF78A4000B68AB /* PBXTargetDependency */,
 			);
-			name = POSInputStreamLibraryTests;
+			name = POSInputStreamLibraryExtensionTests;
 			productName = POSInputStreamLibraryTests;
-			productReference = 219AA0A318BF78A4000B68AB /* POSInputStreamLibraryTests.xctest */;
+			productReference = 219AA0A318BF78A4000B68AB /* POSInputStreamLibraryExtensionTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +244,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Pavel Osipov";
 			};
-			buildConfigurationList = 219AA08E18BF78A4000B68AB /* Build configuration list for PBXProject "POSInputStreamLibrary" */;
+			buildConfigurationList = 219AA08E18BF78A4000B68AB /* Build configuration list for PBXProject "POSInputStreamLibraryExtension" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -249,8 +256,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				219AA09218BF78A4000B68AB /* POSInputStreamLibrary */,
-				219AA0A218BF78A4000B68AB /* POSInputStreamLibraryTests */,
+				219AA09218BF78A4000B68AB /* POSInputStreamLibraryExtension */,
+				219AA0A218BF78A4000B68AB /* POSInputStreamLibraryExtensionTests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,7 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7C620B919878EF300BA0ADD /* POSLocking.m in Sources */,
 				219AA0C818BF7C5B000B68AB /* POSBlobInputStream.m in Sources */,
+				B7C620BC19878F0700BA0ADD /* POSInputStreamJPEGDataSource.m in Sources */,
 				219AA0C718BF7C5B000B68AB /* NSInputStream+POS.m in Sources */,
 				219AA0C918BF7C5B000B68AB /* POSBlobInputStreamAssetDataSource.m in Sources */,
 			);
@@ -293,7 +302,7 @@
 /* Begin PBXTargetDependency section */
 		219AA0AA18BF78A4000B68AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 219AA09218BF78A4000B68AB /* POSInputStreamLibrary */;
+			target = 219AA09218BF78A4000B68AB /* POSInputStreamLibraryExtension */;
 			targetProxy = 219AA0A918BF78A4000B68AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -383,9 +392,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/POSInputStreamLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "POSInputStreamLibrary/POSInputStreamLibrary-Prefix.pch";
+				GCC_PREFIX_HEADER = "POSInputStreamLibrary/POSInputStreamLibraryExtension-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = POSInputStreamLibraryExtension;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -395,9 +404,9 @@
 			buildSettings = {
 				DSTROOT = /tmp/POSInputStreamLibrary.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "POSInputStreamLibrary/POSInputStreamLibrary-Prefix.pch";
+				GCC_PREFIX_HEADER = "POSInputStreamLibrary/POSInputStreamLibraryExtension-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = POSInputStreamLibraryExtension;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -416,8 +425,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "POSInputStreamLibraryTests/POSInputStreamLibraryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "POSInputStreamLibraryTests/POSInputStreamLibraryExtensionTests-Info.plist";
+				PRODUCT_NAME = POSInputStreamLibraryExtensionTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -432,8 +441,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "POSInputStreamLibrary/POSInputStreamLibrary-Prefix.pch";
-				INFOPLIST_FILE = "POSInputStreamLibraryTests/POSInputStreamLibraryTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "POSInputStreamLibraryTests/POSInputStreamLibraryExtensionTests-Info.plist";
+				PRODUCT_NAME = POSInputStreamLibraryExtensionTests;
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -441,7 +450,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		219AA08E18BF78A4000B68AB /* Build configuration list for PBXProject "POSInputStreamLibrary" */ = {
+		219AA08E18BF78A4000B68AB /* Build configuration list for PBXProject "POSInputStreamLibraryExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				219AA0B418BF78A4000B68AB /* Debug */,
@@ -450,7 +459,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		219AA0B618BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibrary" */ = {
+		219AA0B618BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibraryExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				219AA0B718BF78A4000B68AB /* Debug */,
@@ -459,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		219AA0B918BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibraryTests" */ = {
+		219AA0B918BF78A4000B68AB /* Build configuration list for PBXNativeTarget "POSInputStreamLibraryExtensionTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				219AA0BA18BF78A4000B68AB /* Debug */,
