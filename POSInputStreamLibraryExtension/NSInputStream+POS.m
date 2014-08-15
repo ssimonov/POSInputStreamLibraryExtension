@@ -15,7 +15,7 @@
 @implementation NSInputStream (POS)
 
 + (NSInputStream *) pos_inputStreamWithFilePath:(NSString*) filePath {
-    return [NSInputStream pos_inputStreamWithFileAtPath:filePath asynchronous:NO];
+    return [NSInputStream pos_inputStreamWithFileAtPath:filePath asynchronous:YES];
 }
 
 + (NSInputStream *) pos_inputStreamWithFileAtPath:(NSString*) filePath asynchronous:(BOOL) asynchronous {
