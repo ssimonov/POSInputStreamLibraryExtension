@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0F927CEB19B7174D00612E8A /* POSInputStreamFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F927CEA19B7174D00612E8A /* POSInputStreamFileDataSource.m */; };
+		0F927D0A19B7310000612E8A /* NSInputStream+POS.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C620BF1987910E00BA0ADD /* NSInputStream+POS.m */; };
+		0F927D0B19B7310000612E8A /* POSBlobInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C620C11987910E00BA0ADD /* POSBlobInputStream.m */; };
+		0F927D0C19B7310000612E8A /* POSBlobInputStreamAssetDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C620C31987910E00BA0ADD /* POSBlobInputStreamAssetDataSource.m */; };
+		0F927D0D19B7310000612E8A /* POSLocking.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C620CA1987910E00BA0ADD /* POSLocking.m */; };
 		219AA09718BF78A4000B68AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA09618BF78A4000B68AB /* Foundation.framework */; };
 		219AA0A518BF78A4000B68AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA0A418BF78A4000B68AB /* XCTest.framework */; };
 		219AA0A618BF78A4000B68AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 219AA09618BF78A4000B68AB /* Foundation.framework */; };
@@ -269,6 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F927D0A19B7310000612E8A /* NSInputStream+POS.m in Sources */,
+				0F927D0B19B7310000612E8A /* POSBlobInputStream.m in Sources */,
+				0F927D0C19B7310000612E8A /* POSBlobInputStreamAssetDataSource.m in Sources */,
+				0F927D0D19B7310000612E8A /* POSLocking.m in Sources */,
 				0F927CEB19B7174D00612E8A /* POSInputStreamFileDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

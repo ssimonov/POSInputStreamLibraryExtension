@@ -10,7 +10,7 @@
 
 #import "POSBlobInputStream.h"
 #import "POSBlobInputStreamAssetDataSource.h"
-#import "POSInputStreamJPEGDataSource.h"
+#import "POSInputStreamFileDataSource.h"
 
 @implementation NSInputStream (POS)
 
@@ -19,7 +19,7 @@
 }
 
 + (NSInputStream *) pos_inputStreamWithFileAtPath:(NSString*) filePath asynchronous:(BOOL) asynchronous {
-    POSInputStreamJPEGDataSource *dataSource = [[POSInputStreamJPEGDataSource alloc] initWithFilePath:filePath];
+    POSInputStreamFileDataSource *dataSource = [[POSInputStreamFileDataSource alloc] initWithFilePath:filePath];
     dataSource.openSynchronously = !asynchronous;
     POSBlobInputStream *stream = [[POSBlobInputStream alloc] initWithDataSource:dataSource];
     stream.shouldNotifyCoreFoundationAboutStatusChange = YES;
