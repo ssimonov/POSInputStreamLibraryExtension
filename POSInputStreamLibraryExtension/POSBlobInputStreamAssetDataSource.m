@@ -9,6 +9,7 @@
 #import "POSBlobInputStreamAssetDataSource.h"
 #import "POSLocking.h"
 
+
 typedef long long POSLength;
 
 NSString * const POSBlobInputStreamAssetDataSourceErrorDomain = @"com.github.pavelosipov.POSBlobInputStreamAssetDataSource";
@@ -53,7 +54,9 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 #pragma mark - POSBlobInputStreamAssetDataSource
 
 @interface POSBlobInputStreamAssetDataSource ()
+
 @property (nonatomic, readwrite) NSError *error;
+
 @end
 
 @implementation POSBlobInputStreamAssetDataSource {
@@ -167,24 +170,27 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 #pragma mark - POSBlobInputStreamDataSource Private
 
 - (void)p_open {
-    id<Locking> lock = [self p_lockForOpening];
+    __strong id<Locking> lock = [self p_lockForOpening];
     [lock lock];
+    __weak __typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{ @autoreleasepool {
+        __strong __typeof(self) strongSelf = weakSelf;
         _assetsLibrary = [[ALAssetsLibrary alloc] init];
         [_assetsLibrary assetForURL:_assetURL resultBlock:^(ALAsset *asset) {
             ALAssetRepresentation *assetRepresentation = [asset defaultRepresentation];
             if (assetRepresentation != nil) {
-                [self p_updateAsset:asset withAssetRepresentation:assetRepresentation];
-                [self p_updateCacheInMode:UpdateCacheModeFailWhenError];
+                [strongSelf p_updateAsset:asset withAssetRepresentation:assetRepresentation];
+                [strongSelf p_updateCacheInMode:UpdateCacheModeFailWhenError];
             } else {
-                [self setError:[NSError pos_assetOpenError]];
+                [strongSelf setError:[NSError pos_assetOpenError]];
             }
             [lock unlock];
         } failureBlock:^(NSError *error) {
-            [self setError:[NSError pos_assetOpenError]];
+            [strongSelf setError:[NSError pos_assetOpenError]];
             [lock unlock];
         }];
     }});
+    
     [lock waitWithTimeout:DISPATCH_TIME_FOREVER];
 }
 
@@ -229,7 +235,11 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
     if ([self shouldOpenSynchronously]) {
         // If you want open stream synchronously you should do that in some worker thread to avoid deadlock.
         NSParameterAssert(![[NSThread currentThread] isMainThread]);
-        return [GCDLock new];
+        if (!kIOS5x) {
+            return [OKLock new];
+        } else {
+            return [GCDLock new];
+        }
     } else {
         return [DummyLock new];
     }

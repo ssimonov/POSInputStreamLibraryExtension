@@ -170,7 +170,7 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 - (void)p_open {
     id<Locking> lock = [self p_lockForOpening];
     [lock lock];
-
+    
     dispatch_async(dispatch_get_main_queue(), ^{ @autoreleasepool {
         NSDictionary *dict = [[NSFileManager defaultManager] attributesOfItemAtPath:_filePath error:nil];
         NSFileHandle *file = [NSFileHandle fileHandleForReadingAtPath:_filePath];
@@ -182,7 +182,7 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
         }
         [lock unlock];
     }});
-
+    
     [lock waitWithTimeout:DISPATCH_TIME_FOREVER];
 }
 
@@ -229,7 +229,11 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
     if ([self shouldOpenSynchronously]) {
         // If you want open stream synchronously you should do that in some worker thread to avoid deadlock.
         NSParameterAssert(![[NSThread currentThread] isMainThread]);
-        return [GCDLock new];
+        if (!kIOS5x) {
+            return [OKLock new];
+        } else {
+            return [GCDLock new];
+        }
     } else {
         return [DummyLock new];
     }
