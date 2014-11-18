@@ -229,11 +229,7 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
     if ([self shouldOpenSynchronously]) {
         // If you want open stream synchronously you should do that in some worker thread to avoid deadlock.
         NSParameterAssert(![[NSThread currentThread] isMainThread]);
-        if (!kIOS5x) {
-            return [OKLock new];
-        } else {
-            return [GCDLock new];
-        }
+        return [GCDLock new];
     } else {
         return [DummyLock new];
     }

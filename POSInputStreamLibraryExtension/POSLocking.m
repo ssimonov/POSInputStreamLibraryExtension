@@ -27,25 +27,6 @@
 
 @end
 
-@implementation OKLock {
-    NSLock *lock_;
-}
-
-- (void)lock {
-    lock_ = [NSLock new];
-    [lock_ lock];
-}
-
-- (void)unlock {
-    [lock_ unlock];
-}
-
-- (BOOL)waitWithTimeout:(dispatch_time_t)timeout {
-    return [lock_ lockBeforeDate:[NSDate dateWithTimeIntervalSince1970:timeout]];
-}
-
-@end
-
 @implementation DummyLock
 
 - (void)lock {}
