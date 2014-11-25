@@ -95,11 +95,11 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 #pragma mark - POSBlobInputStreamDataSource
 
 - (BOOL)isOpenCompleted {
-    return [[NSFileManager defaultManager] fileExistsAtPath:_filePath];
+    return (nil != _file);
 }
 
 - (void)open {
-    if ([self isOpenCompleted]) {
+    if (![self isOpenCompleted]) {
         [self p_open];
     }
 }
@@ -187,7 +187,7 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 }
 
 - (void)p_updateFile:(NSFileHandle*) file withAttributes:(NSDictionary*) attributes {
-    const BOOL shouldEmitOpenCompletedEvent = [self isOpenCompleted];
+    const BOOL shouldEmitOpenCompletedEvent = ![self isOpenCompleted];
     if (shouldEmitOpenCompletedEvent) {
         [self willChangeValueForKey:POSBlobInputStreamDataSourceOpenCompletedKeyPath];
     }
