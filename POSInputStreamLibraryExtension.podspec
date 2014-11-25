@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'POSInputStreamLibraryExtension'
-  s.version      = '1.0.3'
+  s.version      = '1.0.4'
   s.license      = 'MIT'
   s.summary      = 'NSInputStream implementation for ALAsset, NSFileHandle and other kinds of data source.'
   s.homepage     = 'https://github.com/ssimonov/POSInputStreamLibraryExtension.git'
