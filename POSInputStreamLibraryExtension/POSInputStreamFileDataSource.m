@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 + (NSError *)pos_fileOpenError {
     NSDictionary *userInfo = @{ NSLocalizedDescriptionKey : @"Failed to open file stream." };
     return [NSError errorWithDomain:POSBlobInputStreamFileDataSourceErrorDomain
-                               code:POSBlobInputStreamAssetDataSourceErrorCodeOpen
+                               code:POSBlobInputStreamFileDataSourceErrorCodeOpen
                            userInfo:userInfo];
 }
 
@@ -38,11 +38,11 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
     NSString *description = [NSString stringWithFormat:@"Failed to read asset with URL %@", filePath];
     if (reason) {
         return [NSError errorWithDomain:POSBlobInputStreamFileDataSourceErrorDomain
-                                   code:POSBlobInputStreamAssetDataSourceErrorCodeRead
+                                   code:POSBlobInputStreamFileDataSourceErrorCodeRead
                                userInfo:@{ NSLocalizedDescriptionKey: description, NSUnderlyingErrorKey: reason }];
     } else {
         return [NSError errorWithDomain:POSBlobInputStreamFileDataSourceErrorDomain
-                                   code:POSBlobInputStreamAssetDataSourceErrorCodeRead
+                                   code:POSBlobInputStreamFileDataSourceErrorCodeRead
                                userInfo:@{ NSLocalizedDescriptionKey: description }];
     }
 }
