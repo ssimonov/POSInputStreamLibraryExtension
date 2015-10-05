@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'POSInputStreamLibraryExtension/*.{h,m}'
   s.frameworks   = 'Foundation', 'AssetsLibrary'
-  s.dependency   = 'POSInputStreamLibrary', '~> 2.3.1'
+  s.dependency     'POSInputStreamLibrary', '~> 2.3.1'
 end
