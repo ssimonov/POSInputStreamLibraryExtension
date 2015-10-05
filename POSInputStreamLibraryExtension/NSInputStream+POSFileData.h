@@ -8,17 +8,12 @@
 
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface NSInputStream (POS)
-
-+ (NSInputStream *)pos_inputStreamWithAssetURL:(NSURL *)assetURL;
-+ (NSInputStream *)pos_inputStreamWithAssetURL:(NSURL *)assetURL
-                                  asynchronous:(BOOL)asynchronous;
+@interface NSInputStream (POSExtension)
 
 + (NSInputStream *)pos_inputStreamWithFilePath:(NSString*)filePath;
 + (NSInputStream *)pos_inputStreamWithFileAtPath:(NSString*)filePath
                                     asynchronous:(BOOL)asynchronous;
 
-+ (NSInputStream *)pos_inputStreamForCFNetworkWithAssetURL:(NSURL *)assetURL;
 + (NSInputStream *)pos_inputStreamForCFNetworkWithFilePath:(NSString*)filePath;
 
 @end

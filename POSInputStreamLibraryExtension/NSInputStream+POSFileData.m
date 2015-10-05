@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 Pavel Osipov. All rights reserved.
 //
 
-#import "NSInputStream+POS.h"
+#import "NSInputStream+POSFileData.h"
 
 #import "POSBlobInputStream.h"
 #import "POSBlobInputStreamAssetDataSource.h"
 #import "POSInputStreamFileDataSource.h"
 
-@implementation NSInputStream (POS)
+@implementation NSInputStream (POSExtension)
 
 + (NSInputStream *)pos_inputStreamWithFilePath:(NSString*)filePath {
     return [NSInputStream pos_inputStreamWithFileAtPath:filePath asynchronous:YES];

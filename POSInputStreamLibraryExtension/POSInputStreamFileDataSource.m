@@ -168,7 +168,7 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
 #pragma mark - POSBlobInputStreamDataSource Private
 
 - (void)p_open {
-    id<Locking> lock = [self p_lockForOpening];
+    id<POSLocking> lock = [self p_lockForOpening];
     [lock lock];
     
     dispatch_async(dispatch_get_main_queue(), ^{ @autoreleasepool {
@@ -225,13 +225,13 @@ typedef NS_ENUM(NSInteger, UpdateCacheMode) {
     return _fileCacheSize - _fileCacheInternalOffset;
 }
 
-- (id<Locking>)p_lockForOpening {
+- (id<POSLocking>)p_lockForOpening {
     if ([self shouldOpenSynchronously]) {
         // If you want open stream synchronously you should do that in some worker thread to avoid deadlock.
         NSParameterAssert(![[NSThread currentThread] isMainThread]);
-        return [GCDLock new];
+        return [POSGCDLock new];
     } else {
-        return [DummyLock new];
+        return [POSDummyLock new];
     }
 }
 
