@@ -1,5 +1,5 @@
 //
-//  NSInputStream+POS.h
+//  NSInputStream+POSExtension.h
 //  POSBlobInputStreamLibrary
 //
 //  Created by Pavel Osipov on 17.07.13.
